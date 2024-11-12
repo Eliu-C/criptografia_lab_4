@@ -5,7 +5,7 @@ from ajustes import ajustar_iv
 def main():
     algoritmo, clave, iv, texto = solicitar_datos()
     clave_ajustada = ajustar_clave(clave, algoritmo)
-    iv_ajustado = ajustar_iv(iv)
+    iv_ajustado = ajustar_iv(iv, algoritmo)
     
     texto_cifrado = cifrar(algoritmo, clave_ajustada, iv, texto)
     print("Texto cifrado:", texto_cifrado)
